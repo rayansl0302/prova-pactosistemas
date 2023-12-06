@@ -1,0 +1,44 @@
+.container {
+    max-width: 800px;
+    margin: auto;
+
+    .pessoas-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 10px;
+        .mat-form-field{
+            margin: 10px;
+        }
+        .pessoa-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .pessoa-info {
+                flex: 1;
+
+                span {
+                    margin: 15px;
+                }
+            }
+
+            .pessoa-actions {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        button{
+            margin-bottom: 10px;
+        }
+    }
+}

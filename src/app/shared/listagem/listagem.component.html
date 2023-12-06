@@ -1,0 +1,44 @@
+<div class="container">
+    <h1>Listagem de Pessoas</h1>
+    <ul class="pessoas-list">
+      <li *ngFor="let pessoa of pessoas" class="pessoa-item">
+        <div class="pessoa-info">
+          <span><strong>Nome:</strong> {{ pessoa.nome }}</span>
+          <span><strong>Data de Nascimento:</strong> {{ pessoa.data }}</span>
+          <span><strong>Classificação:</strong> {{ pessoa.classificacao }}</span>
+        </div>
+        <div class="pessoa-actions">
+          <button mat-icon-button color="warn" (click)="deletePessoas(pessoa.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+          <button mat-icon-button color="primary" (click)="editarPessoa(pessoa)">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </div>
+      </li>
+    </ul>
+  
+    <div *ngIf="pessoaSelecionada">
+        <h2>Editando {{ pessoaSelecionada.nome }}</h2>
+        <form [formGroup]="form">
+          <mat-form-field appearance="fill">
+            <mat-label>Nome</mat-label>
+            <input matInput formControlName="nome"/>
+          </mat-form-field>
+    
+          <mat-form-field appearance="fill">
+            <mat-label>Data de Nascimento</mat-label>
+            <input matInput formControlName="data" />
+          </mat-form-field>
+    
+          <mat-form-field appearance="fill">
+            <mat-label>Classificação</mat-label>
+            <input matInput formControlName="classificacao" />
+          </mat-form-field>
+    
+          <button mat-raised-button color="primary" (click)="salvarEdicao()">Salvar</button>
+          <button mat-raised-button color="warn" (click)="pessoaSelecionada = null">Fechar</button>
+        </form>
+      </div>
+  </div>
+  

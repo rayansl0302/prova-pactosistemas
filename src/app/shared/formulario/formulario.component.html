@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Formulário de Cadastro</h1>
+    <form class="form-cadastro" [formGroup]="form" (ngSubmit)="submitForm()">
+        <div class="form-cadastro__campos">
+            <mat-form-field>
+                <mat-label>Nome:</mat-label>
+                <input formControlName="nome" type="text" matInput>
+                
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Data de Nascimento</mat-label>
+                <input formControlName="data" name="data-nascimento"
+                    type="date" matInput>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Classificação:</mat-label>
+                <input formControlName="classificacao" type="text"
+                    name="classificacao" matInput>
+            </mat-form-field>
+        </div>
+        <button mat-raised-button type="submit" [disabled]="!form.valid" color="primary">Enviar</button>
+    </form>
+</div>
