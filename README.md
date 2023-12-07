@@ -1,27 +1,32 @@
-# CRUD
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.9.
+Preparação para a Prova: Simulei uma API Local com JSON Server
 
-## Development server
+Pensando em otimizar minha experiência na prova, decidi simular uma API local usando o JSON Server. Ao instalar e executar tanto a API quanto o projeto, tenho acesso a um CRUD totalmente funcional, baseado em uma API local.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Instruções:
 
-## Code scaffolding
+Instalação do JSON Server:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Certifique-se de ter o Node.js instalado em seu sistema.
 
-## Build
+Execute o seguinte comando para instalar o JSON Server globalmente:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+npm install -g json-server
 
-## Running unit tests
+Execução da API Local:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Utilize o seguinte comando para iniciar a simulação da API:
 
-## Running end-to-end tests
+json-server --watch db.json
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+O arquivo db.json contém os dados simulados para a prova.
 
-## Further help
+Execução do Projeto:
+Inicie o projeto para conectar-se à API local e aproveite o CRUD funcional.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Ao seguir essas etapas, criei um ambiente local elegante e eficiente para minha prova, garantindo uma experiência de desenvolvimento suave.
+
+informações do db.json = {
+  "pessoa": [   
+  ]
+}
