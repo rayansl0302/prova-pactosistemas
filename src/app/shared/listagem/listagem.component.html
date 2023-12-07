@@ -1,29 +1,40 @@
-<div class="container">
-    <h1>Listagem de Pessoas</h1>
-    <ul class="pessoas-list">
-      <li *ngFor="let pessoa of pessoas" class="pessoa-item">
-        <div class="pessoa-info">
-          <span><strong>Nome:</strong> {{ pessoa.nome }}</span>
-          <span><strong>Data de Nascimento:</strong> {{ pessoa.data }}</span>
-          <span><strong>Classificação:</strong> {{ pessoa.classificacao }}</span>
-        </div>
-        <div class="pessoa-actions">
-          <button mat-icon-button color="warn" (click)="deletePessoas(pessoa.id)">
-            <mat-icon>delete</mat-icon>
-          </button>
-          <button mat-icon-button color="primary" (click)="editarPessoa(pessoa)">
-            <mat-icon>edit</mat-icon>
-          </button>
-        </div>
-      </li>
-    </ul>
-  
-    <div *ngIf="pessoaSelecionada">
+<div class="bkg">
+  <div class="img-2"></div>
+  <div class="img-1"></div>
+</div>
+<a class="link-home" routerLink="/home">
+  <img src="../../../assets/home.svg" width="40px" height="40px" alt="">Inicio
+</a>
+<div class="lista">
+  <div class="lista-content">
+    <div class="title">
+      <img src="../../../assets/Logo.svg" width="40" height="40" alt="">
+      <h1>Listagem</h1>
+     </div>
+      <ul class="pessoas-list">
+        <li *ngFor="let pessoa of pessoas" class="pessoa-item">
+          <div class="pessoa-info">
+            <span><strong>Nome:</strong> {{ pessoa.nome }}</span>
+            <span><strong>Data de Nascimento:</strong> {{ pessoa.data }}</span>
+            <span><strong>Classificação:</strong> {{ pessoa.classificacao }}</span>
+          </div>
+          <div class="pessoa-actions">
+            <button mat-icon-button color="warn" (click)="deletePessoas(pessoa.id)">
+              <mat-icon>delete</mat-icon>
+            </button>
+            <button mat-icon-button color="primary" (click)="editarPessoa(pessoa)">
+              <mat-icon>edit</mat-icon>
+            </button>
+          </div>
+        </li>
+      </ul>
+    
+      <div *ngIf="pessoaSelecionada">
         <h2>Editando {{ pessoaSelecionada.nome }}</h2>
         <form [formGroup]="form">
           <mat-form-field appearance="fill">
             <mat-label>Nome</mat-label>
-            <input matInput formControlName="nome"/>
+            <input matInput formControlName="nome" />
           </mat-form-field>
     
           <mat-form-field appearance="fill">
@@ -41,4 +52,4 @@
         </form>
       </div>
   </div>
-  
+</div>

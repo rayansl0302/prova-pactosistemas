@@ -1,11 +1,23 @@
+<div class="bkg">
+    <div class="img-2"></div>
+    <div class="img-1"></div>
+</div>
+
 <div class="container">
-    <h1>Formulário de Cadastro</h1>
+    <div class="listagem">
+        <a class="icon" routerLink="/listagem"></a> <p>Listagem</p>
+    </div>
+    <div class="logo">
+        <img src="../../../assets/Logo.svg" width="50" height="50" alt>
+    </div>
     <form class="form-cadastro" [formGroup]="form" (ngSubmit)="submitForm()">
+        <h1>Cadastro</h1>
+
         <div class="form-cadastro__campos">
             <mat-form-field>
                 <mat-label>Nome:</mat-label>
                 <input formControlName="nome" type="text" matInput>
-                
+
             </mat-form-field>
 
             <mat-form-field>
@@ -20,6 +32,7 @@
                     name="classificacao" matInput>
             </mat-form-field>
         </div>
-        <button mat-raised-button type="submit" [disabled]="!form.valid" color="primary">Enviar</button>
+        <button mat-raised-button type="submit" [disabled]="!form.valid"
+            color="primary">Acessar</button>
     </form>
 </div>
